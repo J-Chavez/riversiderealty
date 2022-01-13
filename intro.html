@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Riverside Realty- Welcome</title>
+    <style>
+        body {
+            background-color: #d4eeff ;
+            background-image: url(section1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-width: 650px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        }
+        #item-list {
+            border: none;
+            text-align: center;
+            font-weight:bold;
+            text-transform: uppercase;
+            color: #0074C2;
+            font-size: 3em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding-top: 15px;
+            height: 200px;
+            background: rgba(242, 246, 255, 0.7);
+            margin: 0 auto;
+        }
+#riversidelogo{
+    text-align: center;
+    margin: 0 auto;
+background: rgba(242, 246, 255, 0.7);
+}
+.wrapper{
+    margin-top: 6em;
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    <div id="riversidelogo">
+    <img src="logo.png" alt="logo"></div>
+<div id="item-list" ></div>
+
+<script type="text/javascript">
+    var URL = "index.html";
+    var speed = 3000; 
+    var msgcount = 4;
+    function StringArray(n) {
+        this.length = n;
+        for (var x = 1; x <= n; x++) {
+            this[x] = ' ';
+        }
+    }
+    message = new StringArray(msgcount);
+    message[0] = "Are you ready to turn your dreams into reality?";
+    message[1] = "Are you ready to take the next step?";
+    message[2] = "We can help you on your path...";
+    message[3] = "We make dreams come true...";
+    function Slide() {
+        var index = 0
+        function nextTab() {
+            var divId = document.getElementById("item-list");
+            divId.innerHTML = '<ul>' + message[index] + '</ul>'
+            index = (index + 1); //% message.length;
+            if (index == message.length)
+                setTimeout(function () {
+                    parent.location = URL;
+                }, 3000);
+        }
+        window.setInterval(nextTab, speed);
+    }
+    Slide()
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <title>Riverside Realty- Calculator</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav id="mainNav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="RealtyLogo">
+                </a>
+            </div>
+            <ul>
+                <li> <a href="property.html">Buy a home</a> </li>
+                <li> <a href="sell.html">Sell a home</a> </li>
+                <li> <a href="mortgage.html">Mortgage calculator</a></li>
+                <li> <a href="guestbook.html">Guestbook</a> </li>
+            </ul>
+        </nav>
+        <section class="calculator">
+    <form name="mortgagedata">
+        <table class="calculator">
+            
+                <tr>
+                    <td colspan="2"><div id="mortgagecalc"><h3>Mortgage Calculator</h3></div></td>
+                </tr>
+                <tr>
+                    <td>Mortgage amount</td>
+                    <td><input type="text" name="amount" size="12" onchange="quickmaths();"></td>
+                </tr>
+                <tr>
+                    <td>Interest Rate</td>
+                    <td><input type="text" name="interest" size="12" onchange="quickmaths();"></td>
+                </tr>
+                <tr>               
+                    <td>Mortgage Period</td>
+                    <td><input type="text" name="years" size="12" onchange="quickmaths();"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="butn">
+                        <input id="button" type="button" value="Calculate" onclick="quickmaths();">
+                    </div>
+                </td>
+                </tr>
+            
+            
+                <tr>
+                    
+                    <td colspan="2">
+                        <div id="paymentinfo">
+                        <h3>Payment Information</h3>
+                    </div>
+                    </td>
+                    
+                </tr>
+                <tr>                
+                    <td>Monthly Payments</td>
+                    <td><input type="text" name="payment" size="12"></td>
+                </tr>
+            
+        </table>
+    </form>
+    </section>
+    <section id="calcbottom">
+        <p>Our team is ready to help you with any questions or concerns you might have. Call us and we will gladly go over the numbers with you.</p>
+        <div id="calcaboutus">
+        <p class="clickhere"> <a href="about.html"> Contact us by clicking here</a></p></div>
+    </section>
+    </div>
+<footer class="footer">
+    <div>
+        <p>2021 Riverside Realty LLC. All Rights Reserved.</p>
+        <div id="aboutus"><a href="about.html">About Us</a></div>
+    </div>
+</footer>
+<script src="main.js"></script>
+</body>
+
+</html>
